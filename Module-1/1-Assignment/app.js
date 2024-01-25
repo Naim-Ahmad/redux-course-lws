@@ -35,7 +35,7 @@ function reducerFunction(state = initialState, action) {
   }else if(action.type === 'decrementForm'){
     const cloneState = state.map((obj) => {
         if (obj.name.toLowerCase() === action.payload.name) {
-          obj.result -= action.payload.result;
+          obj.result > action.payload.result ? obj.result -= action.payload.result : obj.result = 0;
           return obj;
         } else {
           return obj;
@@ -62,16 +62,21 @@ const store = Redux.createStore(reducerFunction);
 matchContainer.addEventListener("submit", (e) => {
   e.preventDefault();
   const matchName =
-    e.target.parentElement.previousElementSibling.children[1].innerText;
-
-
+  e.target.parentElement.previousElementSibling.children[1].innerText;
+  const className =  e.target.className;
+  const result = Number(e.target.children[1].value)
+  
+  e.target.reset();
+  
   store.dispatch({
-    type: e.target.className,
+    type: className,
     payload: {
       name: matchName.toLowerCase(),
-      result: Number(e.target.children[1].value),
+      result,
     },
   });
+
+
 });
 
 addMatch.addEventListener("click", () => {

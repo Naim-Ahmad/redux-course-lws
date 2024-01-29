@@ -1,0 +1,13 @@
+{
+  "name": "assignment-redux-toolkit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.1.0",
+    "redux": "^5.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^3.1.0"
+  }
+}

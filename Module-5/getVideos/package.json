@@ -1,0 +1,10 @@
+{
+  "name": "getVideos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.1.0",
+    "redux-logger": "^3.0.6"
+  }
+}

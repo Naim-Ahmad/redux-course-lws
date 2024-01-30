@@ -5,7 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 import Home from './pages/Home.jsx'
-import VideoPage from './pages/VideoPage.jsx'
+import PostPage from './pages/PostPage.jsx'
 import store from './redux/app/store.js'
 
 const router = createBrowserRouter([
@@ -17,10 +17,9 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />
       },
-
       {
-        path: '/video/:id',
-        element: <VideoPage />
+        path: '/post/:postId',
+        element: <PostPage />
       },
 
     ]
@@ -32,6 +31,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
-
   </React.StrictMode>,
 )

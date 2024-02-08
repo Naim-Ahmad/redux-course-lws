@@ -1,0 +1,16 @@
+{
+  "transactions": [
+    {
+      "name": "Salary from facebok",
+      "type": "income",
+      "amount": 5000000,
+      "id": 2
+    },
+    {
+      "name": "হাতে কলমে জাভাস্ক্রিপ্ট ",
+      "type": "expense",
+      "amount": 1000,
+      "id": 3
+    }
+  ]
+}
